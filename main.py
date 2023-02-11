@@ -35,7 +35,10 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    print(mismatch)
+    ch = 'I'
+    if ch in text:
+     print(mismatch)
+    
     # Printing answer, write your code here
 
 if __name__ == "__main__":
