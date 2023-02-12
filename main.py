@@ -5,11 +5,11 @@ Bracket = namedtuple("Bracket", ["char", "position"])
 def are_matching(left, right):
     return (left + right) in ["()", "[]", "{}"]
 
-def find_mismatch(text):
+def find_mismatch(text2):
     opening_brackets_stack = []
     ending_brackets_stack = []
    
-    for i, next in enumerate(text): 
+    for i, next in enumerate(text2): 
         if next in "([{":
             # Process opening bracket, write your code here
             if next == "{" or next == "[" or next =="(":
@@ -34,10 +34,9 @@ def find_mismatch(text):
      
 def main():
     text = input()
-    mismatch = find_mismatch(text)
-    ch = 'I'
-    if ch in text:
-        print(mismatch)
+    text2=input()
+    mismatch = find_mismatch(text2)
+    print(mismatch)
     
     # Printing answer, write your code here
 
